@@ -24,9 +24,9 @@ import android.content.IntentFilter;
 import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
+import org.lineageos.settings.refreshrate.RefreshUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
-
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
 
@@ -36,6 +36,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             Log.d(TAG, "Received boot completed intent");
         try {
             DiracUtils.getInstance(context);
+            RefreshUtils.startService(context);
         } catch (Exception e) {
             Log.d(TAG, "Dirac is not present in system");
         }
