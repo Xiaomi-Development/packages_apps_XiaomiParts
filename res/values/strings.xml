@@ -9,6 +9,10 @@
     <!-- General -->
     <string name="xiaomi_parts_title">Xiaomi Parts</string>
 
+    <!-- Clear Speaker -->
+    <string name="clear_speaker_title">Clear speaker</string>
+    <string name="clear_speaker_summary">Plays a 30-second audio to clear the speaker. If the speaker is lightly blocked, run this feature once or twice.</string>
+
     <!-- Dirac Title/Summary -->
     <string name="dirac_title">Xiaomi Dirac | Sound Enhancer</string>
     <string name="dirac_summary">Optimize audio quality</string>
