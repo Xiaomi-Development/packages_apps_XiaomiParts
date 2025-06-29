@@ -8,5 +8,9 @@
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 # XiaomiParts sepolicy
 BOARD_SEPOLICY_DIRS += packages/apps/XiaomiParts/sepolicy

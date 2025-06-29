@@ -11,6 +11,8 @@
           android:versionCode="2"
           android:versionName="2.0" >
 
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+
     <application
         android:label="@string/xiaomi_parts_title"
         android:defaultToDeviceProtectedStorage="true"
@@ -30,6 +32,16 @@
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+	<!-- Doze -->
+        <activity
+            android:name=".doze.DozeSettingsActivity"
+            android:label="@string/ambient_display_title">
+        </activity>
+
+        <service android:name=".doze.DozeService"
+                 android:permission="XiaomiDozeService">
+        </service>
 
 	<!-- Clear Speaker -->
         <activity

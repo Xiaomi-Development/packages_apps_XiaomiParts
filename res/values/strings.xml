@@ -13,6 +13,20 @@
     <string name="clear_speaker_title">Clear speaker</string>
     <string name="clear_speaker_summary">Plays a 30-second audio to clear the speaker. If the speaker is lightly blocked, run this feature once or twice.</string>
 
+    <!-- Doze Strings -->
+    <string name="dialog_ok">OK</string>
+    <string name="doze_settings_help_title">Help</string>
+    <string name="doze_settings_help_text">These features use sensor events to launch a doze notification pulse. The chosen sensor is only enabled when the device receives a notification, this helps to reduce battery usage. There is also an option to enable the chosen sensor as soon as the screen turns off, this will cause higher battery usage.</string>
+    <string name="doze_brightness_low">Low brightness</string>
+    <string name="doze_brightness_high">High brightness</string>
+    <string name="doze_brightness_adaptive">Adaptive brightness</string>
+    <string name="doze_brightness_title">Doze brightness level</string>
+    <string name="doze_brightness_summary">Brightness level of doze pulse screen (% of max allowed brightness)</string>
+    <string name="ambient_display_title">Ambient display</string>
+    <string name="ambient_display_always_on_title">Always on</string>
+    <string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
+    <string name="ambient_display_enable_title">Ambient display</string>
+
     <!-- Dirac Title/Summary -->
     <string name="dirac_title">Xiaomi Dirac | Sound Enhancer</string>
     <string name="dirac_summary">Optimize audio quality</string>
