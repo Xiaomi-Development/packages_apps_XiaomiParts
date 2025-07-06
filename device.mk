@@ -14,3 +14,5 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # XiaomiParts sepolicy
 BOARD_SEPOLICY_DIRS += packages/apps/XiaomiParts/sepolicy
+
+SELINUX_IGNORE_NEVERALLOWS := true
