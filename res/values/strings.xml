@@ -57,6 +57,12 @@
     <string name="hbm_disable_time_summary">disable delay (seconds)</string>
     <string name="hbm_mode_warning">Long time usage of High brightness mode may damage your display</string>
 
+    <!-- High Touch Polling -->
+    <string name="htsr_title">Touch Responsiveness</string>
+    <string name="htsr_enable_title">Increase Touch Responsiveness</string>
+    <string name="htsr_enable_summary">Increases touch polling rate to decrease latency</string>
+    <string name="htsr_enable_summary_not_supported">Increase Touch Responsiveness is currently not supported by the kernel</string>
+
     <!-- Hifi Title/Summary -->
     <string name="dirac_hifi_title">Hi-Fi</string>
     <string name="dirac_hifi_summary">Decrease noise and Distortion and increase audio quality</string>
