@@ -19,6 +19,11 @@
     <string name="clear_speaker_title">Clear speaker</string>
     <string name="clear_speaker_summary">Plays a 30-second audio to clear the speaker. If the speaker is lightly blocked, run this feature once or twice.</string>
 
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
+
     <!-- Doze Strings -->
     <string name="dialog_ok">OK</string>
     <string name="doze_settings_help_title">Help</string>
@@ -38,6 +43,19 @@
     <string name="dirac_summary">Optimize audio quality</string>
     <string name="dirac_enable">Enable Xiaomi Dirac</string>
     <string name="dirac_preset_title">Sound preset</string>
+
+    <!-- HBM settings -->
+    <string name="hbm_fragment_title">High brightness mode</string>
+    <string name="hbm_fragment_summary">Settings for HBM</string>
+    <string name="hbm_mode_title">HBM</string>
+    <string name="hbm_mode_summary">Enable peak luminance</string>
+    <string name="auto_hbm_title">Automatic HBM</string>
+    <string name="auto_hbm_summary">Enable peak luminance based on sunlight</string>
+    <string name="auto_hbm_threshold_title"></string>
+    <string name="auto_hbm_threshold_summary">threshold (lux)</string>
+    <string name="hbm_disable_time_title"></string>
+    <string name="hbm_disable_time_summary">disable delay (seconds)</string>
+    <string name="hbm_mode_warning">Long time usage of High brightness mode may damage your display</string>
 
     <!-- Hifi Title/Summary -->
     <string name="dirac_hifi_title">Hi-Fi</string>
