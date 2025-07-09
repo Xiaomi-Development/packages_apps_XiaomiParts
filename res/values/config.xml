@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Charge Bypass control -->
+    <bool name="charge_bypass_enabled">false</bool>
+    <!-- Example value: /sys/class/power_supply/battery/battery_input_suspend -->
+    <string name="config_bypass_charge_node"></string>
+
+    <!-- Clear speaker control | Enabled by default, no hardware requirements -->
+    <bool name="ClearSpeaker_enabled">true</bool>
+
+    <!-- Dc Dimming control -->
+    <bool name="DcDimming_enabled">false</bool>
+    <string name="config_dcdimming_node"></string>
+
+    <!-- Dirac control | Enabled by default, no hardware requirements-->
+    <bool name="dirac_enabled">true</bool>
+
+    <!-- HBM control -->
+    <bool name="HBM_enabled">false</bool>
+    <string name="config_hbm_node"></string>
+    <string name="config_backlight_node"></string>
+
+    <!-- Per App refresh rate control-->
+    <bool name="pa_refresh_rate_enabled">false</bool>
+
+    <!-- Touch Sampling control -->
+    <bool name="TouchSamplingSettings_enabled">false</bool>
+
+    <!-- ZRAM control -->
+    <bool name="zram_enabled">false</bool>
+</resources>

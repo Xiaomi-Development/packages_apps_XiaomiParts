@@ -36,6 +36,7 @@
 	<!-- Charge Bypass -->
 	<activity
     	    android:name=".charge.ChargeActivity"
+	    android:enabled="@bool/charge_bypass_enabled"
             android:label="@string/charge_bypass_title"
 	    android:exported="false">
     	    <intent-filter>
@@ -63,6 +64,7 @@
         </service>
         <activity
             android:name=".display.DcDimmingSettingsActivity"
+            android:enabled="@bool/DcDimming_enabled"
             android:label="@string/dc_dimming_enable_title"
             android:exported="true"
             android:theme="@style/Theme.SubSettingsBase">
@@ -90,6 +92,7 @@
 	<!-- Clear Speaker -->
         <activity
             android:name=".speaker.ClearSpeakerActivity"
+            android:enabled="@bool/ClearSpeaker_enabled"
             android:label="@string/clear_speaker_title"
             android:exported="true">
             <intent-filter>
@@ -112,6 +115,7 @@
 	<!-- HBM -->
         <activity
             android:name=".hbm.HBMActivity"
+            android:enabled="@bool/HBM_enabled"
             android:label="@string/hbm_fragment_title"
             android:exported="false"
             android:theme="@style/Theme.SubSettingsBase">
@@ -144,6 +148,7 @@
 	<!-- High Touch Polling Rate -->
         <activity
             android:name=".touchsampling.TouchSamplingSettingsActivity"
+            android:enabled="@bool/TouchSamplingSettings_enabled"
             android:label="@string/htsr_enable_title"
             android:theme="@style/Theme.SubSettingsBase"
             android:exported="false">
@@ -171,6 +176,7 @@
 	<!-- Per-app refresh rate -->
         <activity
             android:name=".refreshrate.RefreshActivity"
+            android:enabled="@bool/pa_refresh_rate_enabled"
             android:label="@string/refresh_title"
             android:exported="false">
             <intent-filter>
@@ -193,6 +199,7 @@
 	<!-- Xiaomi Dirac -->
         <activity
             android:name=".dirac.DiracActivity"
+            android:enabled="@bool/dirac_enabled"
             android:exported="false"
             android:label="@string/dirac_title"
             android:theme="@style/Theme.SubSettingsBase">
@@ -221,6 +228,7 @@
 	<!-- ZRAM -->
         <activity
     	    android:name=".zram.ZramActivity"
+            android:enabled="@bool/zram_enabled"
             android:label="@string/zram_size_title"
 	    android:exported="false">
     	    <intent-filter>

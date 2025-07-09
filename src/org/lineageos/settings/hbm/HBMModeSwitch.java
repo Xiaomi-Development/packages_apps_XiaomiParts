@@ -24,28 +24,31 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.display.*;
 
 public class HBMModeSwitch implements OnPreferenceChangeListener {
-    private static final String HBM = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm_enabled";
-    private static final String BACKLIGHT = "/sys/class/backlight/panel0-backlight/brightness";
+    private String HBM_NODE;
+    private String BACKLIGHT_NODE;
     private Context mContext;
 
     public HBMModeSwitch(Context context) {
+	HBM_NODE = context.getResources().getString(R.string.config_hbm_node);
+	BACKLIGHT_NODE = context.getResources().getString(R.string.config_backlight_node);
         mContext = context;
     }
 
-    public static String getHBM() {
-        if (FileUtils.isFileWritable(HBM)) {
-            return HBM;
+    public String getHBM() {
+        if (FileUtils.isFileWritable(HBM_NODE)) {
+            return HBM_NODE;
         }
         return null;
     }
 
-    public static String getBACKLIGHT() {
-        if (FileUtils.isFileWritable(BACKLIGHT)) {
-            return BACKLIGHT;
+    public String getBACKLIGHT() {
+        if (FileUtils.isFileWritable(BACKLIGHT_NODE)) {
+            return BACKLIGHT_NODE;
         }
         return null;
     }

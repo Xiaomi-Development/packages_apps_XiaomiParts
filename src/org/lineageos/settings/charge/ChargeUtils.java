@@ -21,27 +21,31 @@ import android.content.SharedPreferences;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
 public class ChargeUtils {
 
     private static final String TAG = "ChargeUtils";
-    public static final String BYPASS_CHARGE_NODE = "/sys/class/qcom-battery/input_suspend";
+    //public static final String BYPASS_CHARGE_NODE = context.getResources().getString(R.string.config_bypass_charge_node);
+
     private static final String PREF_BYPASS_CHARGE = "bypass_charge";
 
     // Bypass modes
     public static final int BYPASS_DISABLED = 0;
     public static final int BYPASS_ENABLED = 1;
 
+    private String bypassChargeNode;
     private SharedPreferences mSharedPrefs;
 
     public ChargeUtils(Context context) {
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+	bypassChargeNode = context.getResources().getString(R.string.config_bypass_charge_node);
     }
 
     public boolean isBypassChargeEnabled() {
         try {
-            String value = FileUtils.readOneLine(BYPASS_CHARGE_NODE);
+            String value = FileUtils.readOneLine(bypassChargeNode);
             return value != null && value.equals("1");
         } catch (Exception e) {
             Log.e(TAG, "Failed to read bypass charge status", e);
@@ -51,7 +55,7 @@ public class ChargeUtils {
 
     public void enableBypassCharge(boolean enable) {
         try {
-            FileUtils.writeLine(BYPASS_CHARGE_NODE, enable ? "1" : "0");
+            FileUtils.writeLine(bypassChargeNode, enable ? "1" : "0");
             mSharedPrefs.edit().putBoolean(PREF_BYPASS_CHARGE, enable).apply();
         } catch (Exception e) {
             Log.e(TAG, "Failed to write bypass charge status", e);
@@ -69,6 +73,6 @@ public class ChargeUtils {
     }
     
     public boolean isBypassChargeSupported() {
-        return isNodeAccessible(BYPASS_CHARGE_NODE);
+        return isNodeAccessible(bypassChargeNode);
     }
 }
